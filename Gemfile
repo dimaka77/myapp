@@ -26,6 +26,24 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'spring',        group: :development
 
+# front-end framework
+gem 'foundation-rails'
+# access to the MailChimp API
+gem 'gibbon'
+# use Google Drive spreadsheets for data storage
+gem 'google_drive'
+# for static pages like “about”
+gem 'high_voltage'
+# forms made easy
+gem 'simple_form'
+group :development do
+	# helps when things go wrong
+	gem 'better_errors'
+	# suppresses distracting messages in the log
+	gem 'quiet_assets'
+	# generates files for an application layout
+	gem 'rails_layout'
+end
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
