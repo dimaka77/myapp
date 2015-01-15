@@ -1,0 +1,50 @@
+.cover-image {
+	background-image: url(/htdocs/img/dark-wooden.jpg);
+	background-color: #000;
+	min-height: 100%;
+	position: absolute;
+	width: 100%;
+}
+.hero-text {
+	color: #fff;
+	font-size: 90px;
+	left: 0;
+	position: absolute;
+	margin: -100px auto;
+	right: 0;
+	text-align: center;
+	top: 50%;
+	transition: all 0.3s ease-in-out;
+}
+.hero-text:hover {
+	font-size: 100px;
+}
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	.hero-text {
+		font-size: 55px;
+	}
+}
+footer {
+	bottom: 0;
+	color: #fff;
+	left: 0;
+	position: absolute;
+	right: 0;
+	text-align: center;
+}
+footer a {
+	margin: 0 1px;
+}
+footer i {
+	color: #88898c;
+	transition: all 0.3s ease-in-out;
+}
+footer i:hover {
+	color: #fff;
+	font-size: 2.5em;
+}
+footer .copyright {
+	font-size: 11px;
+}
