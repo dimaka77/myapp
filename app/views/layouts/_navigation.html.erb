@@ -1,4 +1,14 @@
-<ul class="nav">
-	<li><%= link_to 'Home', root_path %></li>
-	<%= render 'layouts/navigation_links' %>
-</ul>
+<%= render 'layouts/mobile_navigation' %>
+<nav class="global-nav nav-bg" style="left: 0px;">
+    <h1 class="logo dark"><a href="/#">Welcome to Anjelas Boutique!</a></h1>
+    <ul>
+        <li class="nav-link nav-link-details"><a href="">Details</a></li>
+        <li class="nav-link nav-link-about-us"><a href="">About Us</a></li>
+        <li class="nav-link nav-link-contact-us"><a href="">Contact Us</a></li>
+        <li class="preorder-button"><a href="#" target="" data-ct-checkout="">Pre-Order</a></li>
+    </ul>
+    <div id="handler" class="mobile handler closed">
+        <i class="fa fa-2x fa-navicon white"></i>
+    </div>
+</nav>
+

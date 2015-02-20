@@ -1,0 +1,41 @@
+// **********************************************************************
+// MEDIA QUERIES
+// To add a query style simple import the mq() function and add a screen
+// size variable (listed below).
+// **********************************************************************
+
+$xxxlg:			1700px;
+$xxlg:			1500px;
+$xlg:			1430px;
+$lg2:           1200px;
+$lg:            1000px;
+$md:            992px;
+$sm:            768px;
+$sm-2:          767px;
+
+// General mobile and small mobile breakpoints
+$mobile:        568px;
+$mobile-sm3:    473px;
+$mobile-sm2:    380px;
+$mobile-sm:     320px;
+
+
+@mixin mq($media) {
+    @if $media == webkit {
+        @media (-webkit-min-device-pixel-ratio: 0) {
+            @content;
+        }
+    }
+
+    @else if $media == retina {
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            @content;
+        }
+    }
+
+    @else {
+        @media (max-width: $media) {
+            @content;
+        }
+    }
+}

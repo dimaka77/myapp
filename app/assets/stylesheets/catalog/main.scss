@@ -1,0 +1,240 @@
+@import "config/responsive";
+
+
+body {
+	width: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+h1 {
+	font-size: 36px;
+}
+
+.mobile {
+	display: none;
+	@include mq($sm) {
+		display: block;
+	}
+}
+
+//HEADER
+
+//dark header
+nav.nav-bg {
+	background-color: #fff;
+	box-shadow: 0 1px 2px 0 rgba(0,0,0,.13);
+	padding: 15px 50px;
+	@include mq($sm) {
+		padding: 10px 25px;
+	}
+	.nav-link a, .handler i {
+		color: #404040;
+	}
+}
+
+//bright header
+nav {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	padding: 40px 100px;
+	-webkit-transition: padding 700ms ease-in-out;
+	-moz-transition: padding 700ms ease-in-out;
+	-ms-transition: padding 700ms ease-in-out;
+	-o-transition: padding 700ms ease-in-out;
+	transition: padding 700ms ease-in-out;
+
+
+	
+	.logo {
+		float: left;
+		margin: 0;
+		a {
+			display: block;
+			width: 140px;
+			height: 54px;
+			min-width: 125px;
+			background-image: asset-url("navbar/logo.svg", images);
+			background-position: 50%;
+			background-repeat: no-repeat;
+			background-size: contain;
+			line-height: 0;
+			font-size: 0;
+			color: transparent;
+		}
+	}
+	.logo.dark a {
+		background-image: asset-url("navbar/logo.svg", images);
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		float: right;
+		text-align: right;
+
+
+		li.nav-link {
+			float: left;
+			display: block;
+			padding: 5px 20px;
+			&:hover {
+				a {
+					color: #00baf2!important;
+					&:after {
+						opacity: 1;
+						transform: none;
+					}
+				}
+			}
+			a {
+				font-family: Proxima-Nova,sans-serif;
+				font-weight: 300;
+				font-size: 1.4rem;
+				display: block;
+				position: relative;
+				cursor: pointer;
+				letter-spacing: .01em;
+				color: #fff;
+				text-decoration: none;
+				padding: 10px;
+				&:after {
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					width: 100%;
+					height: 2px;
+					background-color: #00baf2;
+					content: '';
+					opacity: 0;
+					-webkit-transition: opacity .2s;
+					-moz-transition: opacity .2s;
+					-ms-transition: opacity .2s;
+					-o-transition: opacity .2s;
+					transition: opacity .2s;
+					-webkit-transition: -webkit-transform .2s;
+					-moz-transition: -moz-transform .2s;
+					-ms-transition: -ms-transform .2s;
+					-o-transition: -o-transform .2s;
+					transition: transform .2s;
+					-webkit-transform: translateY(10px);
+					-moz-transform: translateY(10px);
+					-ms-transform: translateY(10px);
+					-o-transform: translateY(10px);
+					transform: translateY(10px);
+				}
+			}
+
+			
+		}
+		li.preorder-button {
+			font-family: Proxima-Nova,sans-serif;
+			font-weight: 300;
+			font-size: 1.4rem;
+			float: left;
+			display: block;
+			cursor: pointer;
+			padding: 0;
+			width: 170px;
+			text-align: center;
+			background: #00baf2;
+			border: solid 2px #00baf2;
+			border-radius: 4px;
+			-webkit-transition: background .2s ease;
+			-moz-transition: background .2s ease;
+			-ms-transition: background .2s ease;
+			-o-transition: background .2s ease;
+			transition: background .2s ease;
+			a {
+				display: block;
+				padding: 15px 0;
+				color: #fff;
+			}
+			&:hover {
+				background: #54e1ff;
+				text-decoration: none;
+				color: #fff;
+			}
+		}
+	}
+	
+}
+
+
+//Main container
+
+#container {
+	position: absolute;
+	overflow: auto;
+
+	#hero {
+		position: relative;
+		background-size: cover;
+		width: 100%;
+	}
+	.hero {
+		width: 100%;
+		max-height: 960px;
+		overflow: hidden;
+		position: relative;
+		header h2 {
+			text-align: center;
+			margin: 0 0 10px;
+			font-size: 6rem;
+			font-family: Avenir,sans-serif;
+			font-weight: 200;
+			color: #000;
+		}
+
+		.heroText {
+			z-index: 2;
+			position: absolute;
+			text-align: center;
+			width: 100%;
+			top: 40%;
+		}
+	}
+	#hero-slider {
+		position: relative;
+	}
+	.backslider {
+		position: fixed;
+		left: 0;
+		top: 0;
+		background: #000;
+		overflow: hidden;
+		z-index: 0;
+
+		.bs-controls {
+			position: absolute;
+			display: none;
+			right: 10px;
+			bottom: 10px;
+			z-index: 100;
+
+
+			.bs-timer
+			{
+				display: block;
+				float: left;
+				width: 20px;
+				height: 20px;
+				outline: 0;
+			}
+
+		}
+		.bs-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: .6;
+			background: asset-url("main_container/bs-overlay.png", images);
+			z-index: 50;
+		}
+	}
+	.slide1 {
+		background: asset-url("main_container/dark-wooden.jpg", images);
+	}
+}
+
+

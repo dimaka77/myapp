@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :posts, :todo
 
 
-  root to: 'visitors#new'
+  root to: 'catalog#index'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
