@@ -166,6 +166,7 @@ nav {
 #container {
 	position: absolute;
 	overflow: auto;
+	width: 100%;
 
 	#hero {
 		position: relative;
@@ -183,7 +184,7 @@ nav {
 			font-size: 6rem;
 			font-family: Avenir,sans-serif;
 			font-weight: 200;
-			color: #000;
+			color: #fff;
 		}
 
 		.heroText {
@@ -196,14 +197,33 @@ nav {
 	}
 	#hero-slider {
 		position: relative;
+
+		ul {
+			margin-bottom: 0;
+			padding-top: 52.78%;
+			list-style: inside none;
+		}
+		li {
+			background-size: contain;
+			background-position: right bottom;
+			background-repeat: no-repeat;
+			overflow: hidden;
+			position: absolute;
+		}
 	}
 	.backslider {
+		height: 100%;
 		position: fixed;
 		left: 0;
 		top: 0;
 		background: #000;
 		overflow: hidden;
+		width: 100%;
 		z-index: 0;
+
+		.slide1 {
+			background: asset-url("main_container/slider1.jpg", images);
+		}
 
 		.bs-controls {
 			position: absolute;
@@ -224,17 +244,17 @@ nav {
 
 		}
 		.bs-overlay {
+			height: 100%;
 			position: absolute;
 			top: 0;
 			left: 0;
 			opacity: .6;
 			background: asset-url("main_container/bs-overlay.png", images);
+			width: 100%;
 			z-index: 50;
 		}
 	}
-	.slide1 {
-		background: asset-url("main_container/dark-wooden.jpg", images);
-	}
+	
 }
 
 
