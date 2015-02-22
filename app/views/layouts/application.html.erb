@@ -1,19 +1,76 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Myapp" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Myapp" %>">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-  </head>
-  <body>
-      <%= render 'layouts/navigation' %>
+</head>
+<body>
+    <%= render 'layouts/navigation' %>
     <div id="container">
-      <%= render 'layouts/main_container' %>
+        <%= render 'layouts/main_container' %>
 
     </div> 
-       <%= yield %>
-  </body>
+    <%= yield %>
+
+    <script type="text/javascript">
+        $(function(){
+
+            var colordivs = $('#hero'),
+                navbar = $('.global-nav');
+
+
+            $(document).scroll(function(e) {
+                var scrollPercent = ($(window).scrollTop() / $('#hero').outerHeight()) * 100;
+                console.log(scrollPercent);
+                if (scrollPercent > 0) {
+                    navbar.addClass('nav-bg');
+
+                    // if (scrollPercent < 33) {
+                    //     var opacity = 1 - (scrollPercent / 33);
+                    //     $(colordivs[0]).css('opacity', opacity);
+
+                    // }
+                    // else if (scrollPercent > 66) {
+                    //     var opacity = 1 - (scrollPercent / 100);
+                    //     $(colordivs[0]).css('opacity', 0);
+                    //     $(colordivs[1]).css('opacity', 0);
+                    //     $(colordivs[2]).css('opacity', opacity);
+                    // }
+                    // else if (scrollPercent > 33) {
+                    //     var opacity = 1 - (scrollPercent / 66);
+                    //     $(colordivs[0]).css('opacity', 0);
+                    //     $(colordivs[1]).css('opacity', opacity);
+                    // }
+                } else {
+                    navbar.removeClass('nav-bg');
+                }
+            });
+
+
+
+
+
+
+
+
+$('.heroText').on('click',function(){
+// $('.nav-link').removeClass('bounce');
+$(this).addClass('animated infinite bounce');
+console.log('here');
+
+});
+$('.nav-link').each(function(){
+    $(this).on('click', function(){
+        $(this).addClass('animated pulse');
+    });
+});
+});
+
+
+</script>
+</body>
 </html>
