@@ -1,5 +1,5 @@
 <div class="snap-drawers mobile hide">
-    <div class="snap-drawer snap-drawer-left ">
+    <div class="snap-drawer snap-drawer-right">
         <ul>
             <li class="details-link"><a href="details#">DETAILS</a></li>
             <li class="about-link"><a href="about-us#">ABOUT US</a></li>
@@ -7,6 +7,42 @@
             <li class="faq-link"><a href="http://support.eero.com" target="_blank">FAQs</a></li>
         </ul>
     </div>
-    <div class="snap-drawer snap-drawer-right">
-    </div>
 </div>
+<script type="text/javascript">
+    $(function(){
+        var snapper = new Snap({
+            element: document.getElementById('container'),
+            dragger: null,
+            disable: 'none',
+            addBodyClasses: true,
+            hyperextensible: true,
+            resistance: 0.5,
+            flickThreshold: 50,
+            transitionSpeed: 0.3,
+            easing: 'ease',
+            maxPosition: 266,
+            minPosition: -266,
+            tapToClose: true,
+            touchToDrag: true,
+            slideIntent: 40,
+            minDragDistance: 5
+      });
+
+
+        $('#handler, #container').on('click', function(){
+            console.log('here');
+            if( snapper.state().state=="right" ){
+                snapper.close();
+                $('.snap-drawers').addClass('hide');
+            } else {
+                snapper.open('right');
+                $('.snap-drawers').removeClass('hide');
+            }
+
+        });
+    });
+
+
+
+
+</script>
