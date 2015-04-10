@@ -16,6 +16,13 @@
 //= require jquery_slides/jquery.slides
 //= require snap
 //= require turbolinks
+//= require underscore
+//= require backbone
+//= require backbone.marionette
+//= require backbone_rails_sync
+//= require backbone_datalink
+//= require backbone/myapp
+
 //= require_tree .
 
 $(function() {

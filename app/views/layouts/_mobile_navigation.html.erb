@@ -28,18 +28,36 @@
             minDragDistance: 5
       });
 
+        $(document).on('click', '#container', function(e){
+            var $target = $(e.target);
 
-        $('#handler, #container').on('click', function(){
+            if($target.is('.handler')){
             console.log('here');
-            if( snapper.state().state=="right" ){
-                snapper.close();
-                $('.snap-drawers').addClass('hide');
-            } else {
-                snapper.open('right');
-                $('.snap-drawers').removeClass('hide');
-            }
 
+                // if( snapper.state().state=="right" ){
+                //     snapper.close();
+                //     $('.snap-drawers').addClass('hide');
+                // } else {
+                //     snapper.open('right');
+                //     $('.snap-drawers').removeClass('hide');
+                // }
+            }
         });
+
+
+
+        
+
+        // $('#handler, #container').on('click', function(){
+        //     if( snapper.state().state=="right" ){
+        //         snapper.close();
+        //         $('.snap-drawers').addClass('hide');
+        //     } else {
+        //         snapper.open('right');
+        //         $('.snap-drawers').removeClass('hide');
+        //     }
+
+        // });
     });
 
 

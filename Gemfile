@@ -43,6 +43,8 @@ gem 'google_drive'
 gem 'high_voltage'
 # forms made easy
 gem 'simple_form'
+# backbone marionette
+gem 'marionette-rails'
 # backbone
 gem 'rails-backbone', '~> 0.9.10'
 # handlebars
