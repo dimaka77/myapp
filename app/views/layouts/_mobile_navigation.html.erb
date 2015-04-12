@@ -23,44 +23,19 @@
             maxPosition: 266,
             minPosition: -266,
             tapToClose: true,
-            touchToDrag: true,
+            touchToDrag: false,
             slideIntent: 40,
             minDragDistance: 5
       });
 
-        $(document).on('click', '#container', function(e){
-            var $target = $(e.target);
-
-            if($target.is('.handler')){
-            console.log('here');
-
-                // if( snapper.state().state=="right" ){
-                //     snapper.close();
-                //     $('.snap-drawers').addClass('hide');
-                // } else {
-                //     snapper.open('right');
-                //     $('.snap-drawers').removeClass('hide');
-                // }
+        $('#handler').on('click', function(){
+            if( snapper.state().state=="right" ){
+                snapper.close();
+                $('.snap-drawers').addClass('hide');
+            } else {
+                snapper.open('right');
+                $('.snap-drawers').removeClass('hide');
             }
         });
-
-
-
-        
-
-        // $('#handler, #container').on('click', function(){
-        //     if( snapper.state().state=="right" ){
-        //         snapper.close();
-        //         $('.snap-drawers').addClass('hide');
-        //     } else {
-        //         snapper.open('right');
-        //         $('.snap-drawers').removeClass('hide');
-        //     }
-
-        // });
     });
-
-
-
-
 </script>

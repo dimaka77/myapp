@@ -349,21 +349,17 @@ nav {
 	// SECTION HIGHLIGHTS
 	.highlights {
 		width: 100%;
-		padding: 100px;
+		padding: 100px 0;
 		float: left;
 		background: #f2f4f5;
 
 		ul {
-			width: 85%;
+			width: 100%;
 			max-width: 1200px;
 			margin: 0 auto;
 			text-align: center;
 
 			li {
-				width: 33%;
-				float: left;
-				background-size: 220px;
-				padding: 20px 50px;
 				text-align: center;
 
 				h4 {
@@ -371,7 +367,7 @@ nav {
 					font-weight: 400;
 					font-size: 2rem;
 					color: #404040;
-					padding: 210px 0 0;
+					padding: 220px 0 0;
 				}
 				p {
 					font-family: Proxima-Nova,sans-serif;
