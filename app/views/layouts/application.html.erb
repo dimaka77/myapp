@@ -7,13 +7,15 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <script type="text/javascript">
+        L.mapbox.accessToken = 'pk.eyJ1IjoiYW5qZWxhNzciLCJhIjoiVmYxYWtORSJ9.FJD2k5bSpeoGhJUog5_9mQ';
+    </script>    
+
 </head>
 <body>
     <%= render 'layouts/mobile_navigation' %>
-    <div id="container">
-        <%= render 'layouts/main_container' %>
-
-    </div> 
+    <header><%= render 'layouts/navigation' %></header>
+    
     <%= yield %>
 
     <script type="text/javascript">

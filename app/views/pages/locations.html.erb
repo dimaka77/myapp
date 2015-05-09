@@ -1,0 +1,22 @@
+<% content_for :title do %>Locations<% end %>
+
+<h1>Location page </h1>
+<section class="map-section">
+	<div id="map" class="map"></div>
+
+</section>
+<style type="text/css">
+	
+	.map {
+		height: 500px;
+		width: 500px;
+	}
+</style>
+<script type="text/javascript">
+	$(function(){
+		L.mapbox.accessToken = 'pk.eyJ1IjoiYXNjZW5kaWZ5IiwiYSI6IllUM0tmSzgifQ.8WK5dWrGVXsPQ7GyQnQ2Cw';
+		var map = L.mapbox.map('map', 'ascendify.jl34io5a')
+		.setView([40, -74.50], 9);
+	});
+
+</script>

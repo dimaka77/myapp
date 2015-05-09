@@ -22,6 +22,7 @@
 //= require backbone_rails_sync
 //= require backbone_datalink
 //= require backbone/myapp
+//= require mapbox.js
 
 //= require_tree .
 
