@@ -12,10 +12,167 @@ h1 {
 	font-size: 36px;
 }
 
+// MAP 
+.leaflet-left .leaflet-control {
+  margin-left: 10px;
+  position: relative;
+  top: 100px;
+  margin-left: 55px;
+}
+
+body.show-drawer {
+	.global-nav {
+		-o-transform: translate3d(-266px, 0px, 0px);
+		-ms-transform: translate3d(-266px, 0px, 0px);
+		-moz-transform: translate3d(-266px, 0px, 0px);
+		-webkit-transform: translate3d(-266px, 0px, 0px);
+		transform: translate3d(-266px, 0px, 0px);
+	}
+	.toggle-nav {
+		-o-transform: translate3d(0, 0, 0) rotate(90deg) scale(1);
+		-ms-transform: translate3d(0, 0, 0) rotate(90deg) scale(1);
+		-moz-transform: translate3d(0, 0, 0) rotate(90deg) scale(1);
+		-webkit-transform: translate3d(0, 0, 0) rotate(90deg) scale(1);
+		transform: translate3d(0, 0, 0) rotate(90deg) scale(1);
+		span {
+			background: transparent !important;
+			&:after {
+				-o-transform: translate3d(0, -10px, 0) rotate(45deg);
+				-ms-transform: translate3d(0, -10px, 0) rotate(45deg);
+				-moz-transform: translate3d(0, -10px, 0) rotate(45deg);
+				-webkit-transform: translate3d(0, -10px, 0) rotate(45deg);
+				transform: translate3d(0, -10px, 0) rotate(45deg);
+			}
+			&:before {
+				-o-transform: translate3d(0, 10px, 0) rotate(-45deg);
+				-ms-transform: translate3d(0, 10px, 0) rotate(-45deg);
+				-moz-transform: translate3d(0, 10px, 0) rotate(-45deg);
+				-webkit-transform: translate3d(0, 10px, 0) rotate(-45deg);
+				transform: translate3d(0, 10px, 0) rotate(-45deg);
+			}
+
+		}
+		&:hover span:after {
+			-o-transform: translate3d(0, -10px, 0) rotate(45deg) scale(1.2);
+			-ms-transform: translate3d(0, -10px, 0) rotate(45deg) scale(1.2);
+			-moz-transform: translate3d(0, -10px, 0) rotate(45deg) scale(1.2);
+			-webkit-transform: translate3d(0, -10px, 0) rotate(45deg) scale(1.2);
+			transform: translate3d(0, -10px, 0) rotate(45deg) scale(1.2);
+		}
+		&:hover span:before {
+			-o-transform: translate3d(0, 10px, 0) rotate(-45deg) scale(1.2);
+			-ms-transform: translate3d(0, 10px, 0) rotate(-45deg) scale(1.2);
+			-moz-transform: translate3d(0, 10px, 0) rotate(-45deg) scale(1.2);
+			-webkit-transform: translate3d(0, 10px, 0) rotate(-45deg) scale(1.2);
+			transform: translate3d(0, 10px, 0) rotate(-45deg) scale(1.2);
+		}
+		span:before, span:after {
+			background: #fff;
+		}
+	}
+}
 .mobile {
-	display: none;
-	@include mq($md) {
+	.toggle-nav {
+		float: right;
 		display: block;
+		-o-backface-visibility: hidden;
+		-ms-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+		-webkit-transition: margin 100ms ease, -o-transform 500ms cubic-bezier(.61,-0.67,0,1.45), -moz-transform 500ms cubic-bezier(.61,-0.67,0,1.45), -ms-transform 500ms cubic-bezier(.61,-0.67,0,1.45), -webkit-transform 500ms cubic-bezier(.61,-0.67,0,1.45), transform 500ms cubic-bezier(.61,-0.67,0,1.45);
+		-moz-transition: margin 100ms ease, -o-transform 500ms cubic-bezier(.61,-0.67,0,1.45), -moz-transform 500ms cubic-bezier(.61,-0.67,0,1.45), -ms-transform 500ms cubic-bezier(.61,-0.67,0,1.45), -webkit-transform 500ms cubic-bezier(.61,-0.67,0,1.45), transform 500ms cubic-bezier(.61,-0.67,0,1.45);
+		transition: margin 100ms ease, -o-transform 500ms cubic-bezier(.61,-0.67,0,1.45), -moz-transform 500ms cubic-bezier(.61,-0.67,0,1.45), -ms-transform 500ms cubic-bezier(.61,-0.67,0,1.45), -webkit-transform 500ms cubic-bezier(.61,-0.67,0,1.45), transform 500ms cubic-bezier(.61,-0.67,0,1.45);
+		width: 40px;
+		height: 20px;
+		margin: 0 0;
+		position: absolute;
+		outline: none !important;
+		top: 50px;
+		right: 60px;
+		z-index: 99999;
+		-webkit-transform: translateZ(0);
+		-moz-transform: translateZ(0);
+		-ms-transform: translateZ(0);
+		-o-transform: translateZ(0);
+		transform: translateZ(0);
+		pointer-events: all;
+		&:hover span {
+			 background: #F9AA1C;
+			-o-transform: translate3d(0, 0, 0) rotate(0) scale(1);
+			-ms-transform: translate3d(0, 0, 0) rotate(0) scale(1);
+			-moz-transform: translate3d(0, 0, 0) rotate(0) scale(1);
+			-webkit-transform: translate3d(0, 0, 0) rotate(0) scale(1);
+			transform: translate3d(0, 0, 0) rotate(0) scale(1);
+		}
+		&:hover span:after {
+			background: #F9AA1C;
+			-o-transform: translate3d(0, 3px, 0) rotate(0) scale(1);
+			-ms-transform: translate3d(0, 3px, 0) rotate(0) scale(1);
+			-moz-transform: translate3d(0, 3px, 0) rotate(0) scale(1);
+			-webkit-transform: translate3d(0, 3px, 0) rotate(0) scale(1);
+			transform: translate3d(0, 3px, 0) rotate(0) scale(1);
+		}
+		&:hover span:before {
+			background: #F9AA1C;
+			-o-transform: translate3d(0, -3px, 0) rotate(0) scale(1);
+			-ms-transform: translate3d(0, -3px, 0) rotate(0) scale(1);
+			-moz-transform: translate3d(0, -3px, 0) rotate(0) scale(1);
+			-webkit-transform: translate3d(0, -3px, 0) rotate(0) scale(1);
+			transform: translate3d(0, -3px, 0) rotate(0) scale(1);
+		}
+		span {
+			background: #1b1b1b;
+			text-indent: -99999em;
+			height: 3px;
+			width: 100%;
+			display: block;
+			position: absolute;
+			top: 50%;
+			margin-top: -2px;
+			left: 0;
+			-webkit-transition: all 225ms ease;
+			-moz-transition: all 225ms ease;
+			transition: all 225ms ease;
+			-o-transform: translate3d(0, 0, 0) rotate(0) scale(1);
+			-ms-transform: translate3d(0, 0, 0) rotate(0) scale(1);
+			-moz-transform: translate3d(0, 0, 0) rotate(0) scale(1);
+			-webkit-transform: translate3d(0, 0, 0) rotate(0) scale(1);
+			transform: translate3d(0, 0, 0) rotate(0) scale(1);
+			-o-backface-visibility: hidden;
+			-ms-backface-visibility: hidden;
+			-moz-backface-visibility: hidden;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+			&:before {
+				top: -10px;
+			}
+			&:after {
+				bottom: -10px;
+			}
+			&:after, &:before {
+				display: block;
+				position: absolute;
+				left: 0;
+				content: ' ';
+				height: 3px;
+				width: 100%;
+				background: #000;
+				-webkit-transition: all 225ms ease;
+				-moz-transition: all 225ms ease;
+				transition: all 225ms ease;
+				-o-transform: translate3d(0, 0, 0) rotate(0) scale(1);
+				-ms-transform: translate3d(0, 0, 0) rotate(0) scale(1);
+				-moz-transform: translate3d(0, 0, 0) rotate(0) scale(1);
+				-webkit-transform: translate3d(0, 0, 0) rotate(0) scale(1);
+				transform: translate3d(0, 0, 0) rotate(0) scale(1);
+				-o-backface-visibility: hidden;
+				-ms-backface-visibility: hidden;
+				-moz-backface-visibility: hidden;
+				-webkit-backface-visibility: hidden;
+				backface-visibility: hidden;
+			}
+		}
 	}
 }
 
@@ -80,9 +237,6 @@ h1 {
 
 //dark header
 nav.nav-bg {
-	background-color: #fff;
-	box-shadow: 0 1px 2px 0 rgba(0,0,0,.13);
-	padding: 15px 50px;
 	-webkit-transition: all 700ms ease-in-out;
 	-moz-transition: all 700ms ease-in-out;
 	-ms-transition: all 700ms ease-in-out;
@@ -94,6 +248,13 @@ nav.nav-bg {
 	.nav-link a, .handler i {
 		color: #404040;
 	}
+	.logo {
+		-webkit-transform: translate(-440px,0);
+		-moz-transform: translate(-440px,0);
+		-ms-transform: translate(-440px,0);
+		-o-transform: translate(-440px,0);
+		transform: translate(-440px,0);
+	}
 }
 
 //bright header
@@ -103,11 +264,11 @@ nav {
 	top: 0;
 	z-index: 100;
 	padding: 40px 100px;
-	-webkit-transition: all 700ms ease-in-out;
-	-moz-transition: all 700ms ease-in-out;
-	-ms-transition: all 700ms ease-in-out;
-	-o-transition: all 700ms ease-in-out;
-	transition: all 700ms ease-in-out;
+	-webkit-transition: all 500ms cubic-bezier(0, 0.6, 0.58, 1);
+	-moz-transition: all 500ms ease-in-out;
+	-ms-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	transition: all 500ms cubic-bezier(0, 0.6, 0.58, 1);
 	@include mq($md) {
 		padding: 10px 25px;
 	}
@@ -116,7 +277,6 @@ nav {
 			position: absolute;
 			top: 25px;
 			right: 30px;
-
 		}
 	}
 	
@@ -136,6 +296,16 @@ nav {
 			font-size: 0;
 			color: transparent;
 		}
+		-webkit-transform: translate( 0px,0);
+		-moz-transform: translate( 0px,0);
+		-ms-transform: translate(0px,0);
+		-o-transform: translate(0px,0);
+		transform: translate(0px,0);
+		-webkit-transition: -webkit-transform 0.3s;
+		-moz-transition: -moz-transform 0.3s;
+		-ms-transition: -ms-transform 0.3s;
+		-o-transition: -o-transform 0.3s;
+		transition: transform 0.3s;
 	}
 	.logo.dark a {
 		background-image: asset-url("navbar/logo.svg", images);
@@ -199,8 +369,6 @@ nav {
 					transform: translateY(10px);
 				}
 			}
-
-			
 		}
 		li.preorder-button {
 			font-family: Proxima-Nova,sans-serif;
@@ -232,9 +400,7 @@ nav {
 			}
 		}
 	}
-	
 }
-
 
 //Main container
 
@@ -387,8 +553,4 @@ nav {
 			}
 		}
 	}
-	
-	
 }
-
-

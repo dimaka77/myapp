@@ -3,7 +3,7 @@
         <ul>
             <li class="details-link"><a href="details#">DETAILS</a></li>
             <li class="about-link"><a href="about-us#">ABOUT US</a></li>
-            <li class="contact-us-link"><a href="developers#">CONTUCT US</a></li>
+            <li class="contact-us-link"><%= link_to 'CONTACT US',page_path('locations') %></li>
             <li class="faq-link"><a href="http://support.eero.com" target="_blank">FAQs</a></li>
         </ul>
     </div>
@@ -22,19 +22,21 @@
             easing: 'ease',
             maxPosition: 266,
             minPosition: -266,
-            tapToClose: true,
+            tapToClose: false,
             touchToDrag: false,
             slideIntent: 40,
             minDragDistance: 5
       });
 
         $('#handler').on('click', function(){
-            if( snapper.state().state=="right" ){
+            if( snapper.state().state==="right" ){
                 snapper.close();
                 $('.snap-drawers').addClass('hide');
+                $('body').removeClass('show-drawer');
             } else {
                 snapper.open('right');
                 $('.snap-drawers').removeClass('hide');
+                $('body').addClass('show-drawer');
             }
         });
     });

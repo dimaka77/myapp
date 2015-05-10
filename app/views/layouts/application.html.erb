@@ -7,13 +7,12 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-    <script type="text/javascript">
-        L.mapbox.accessToken = 'pk.eyJ1IjoiYW5qZWxhNzciLCJhIjoiVmYxYWtORSJ9.FJD2k5bSpeoGhJUog5_9mQ';
-    </script>    
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.9/mapbox.js'></script>
 
 </head>
 <body>
     <%= render 'layouts/mobile_navigation' %>
+
     <header><%= render 'layouts/navigation' %></header>
     
     <%= yield %>
@@ -30,46 +29,18 @@
                 console.log(scrollPercent);
                 if (scrollPercent > 0) {
                     navbar.addClass('nav-bg');
-
-                    // if (scrollPercent < 33) {
-                    //     var opacity = 1 - (scrollPercent / 33);
-                    //     $(colordivs[0]).css('opacity', opacity);
-
-                    // }
-                    // else if (scrollPercent > 66) {
-                    //     var opacity = 1 - (scrollPercent / 100);
-                    //     $(colordivs[0]).css('opacity', 0);
-                    //     $(colordivs[1]).css('opacity', 0);
-                    //     $(colordivs[2]).css('opacity', opacity);
-                    // }
-                    // else if (scrollPercent > 33) {
-                    //     var opacity = 1 - (scrollPercent / 66);
-                    //     $(colordivs[0]).css('opacity', 0);
-                    //     $(colordivs[1]).css('opacity', opacity);
-                    // }
                 } else {
                     navbar.removeClass('nav-bg');
                 }
             });
 
 
+    $('.heroText').on('click',function(){
+    // $('.nav-link').removeClass('bounce');
+    // $(this).addClass('animated infinite bounce');
+    console.log('here');
 
-
-
-
-
-
-$('.heroText').on('click',function(){
-// $('.nav-link').removeClass('bounce');
-$(this).addClass('animated infinite bounce');
-console.log('here');
-
-});
-$('.nav-link').each(function(){
-    $(this).on('click', function(){
-        $(this).addClass('animated pulse');
     });
-});
 });
 
 

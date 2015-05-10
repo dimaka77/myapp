@@ -1,22 +1,21 @@
 <% content_for :title do %>Locations<% end %>
-
-<h1>Location page </h1>
-<section class="map-section">
-	<div id="map" class="map"></div>
-
-</section>
+<div id="container">
+	<section class="map-section row">
+		<div id="map" class="map col-sm-12"></div>
+	</section>
+</div>
 <style type="text/css">
 	
 	.map {
 		height: 500px;
-		width: 500px;
 	}
 </style>
 <script type="text/javascript">
 	$(function(){
-		L.mapbox.accessToken = 'pk.eyJ1IjoiYXNjZW5kaWZ5IiwiYSI6IllUM0tmSzgifQ.8WK5dWrGVXsPQ7GyQnQ2Cw';
-		var map = L.mapbox.map('map', 'ascendify.jl34io5a')
-		.setView([40, -74.50], 9);
+		L.mapbox.accessToken = 'pk.eyJ1IjoiZGltYWthNzcxIiwiYSI6Ik52UWFOUmMifQ.tNZhyraV5VvXrupSLnhRgg';
+		var map = L.mapbox.map('map', 'dimaka771.m50gndm7');
+		map.dragging.disable();
+		map.scrollWheelZoom.disable();
 	});
 
 </script>

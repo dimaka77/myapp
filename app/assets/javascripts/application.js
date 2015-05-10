@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require mapbox.js
 //= require jquery_slides/jquery.slides
 //= require snap
 //= require turbolinks
@@ -22,7 +23,6 @@
 //= require backbone_rails_sync
 //= require backbone_datalink
 //= require backbone/myapp
-//= require mapbox.js
 
 //= require_tree .
 
