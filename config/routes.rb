@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
-  resources :posts, :todo
+  
+  get 'images/index'
+  get 'images/create'
 
+  resources :images, only: [:index, :create]
+  # root to: "images#index"
+
+  resources :posts, :todo
 
   root to: 'catalog#index'
 

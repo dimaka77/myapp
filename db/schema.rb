@@ -11,10 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150120032936) do
+ActiveRecord::Schema.define(version: 20150608050123) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "images", force: true do |t|
+    t.string   "gallery_file_name"
+    t.string   "gallery_content_type"
+    t.integer  "gallery_file_size"
+    t.datetime "gallery_updated_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "media", id: false, force: true do |t|
+    t.string "media_contents", limit: 5000,  null: false
+    t.string "media",          limit: 50000, null: false
+  end
 
   create_table "posts", force: true do |t|
     t.string   "title"

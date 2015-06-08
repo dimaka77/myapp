@@ -1,0 +1,25 @@
+<% @images.each do |image| %>
+  <div class="img-thumbnail"><%= image_tag image.gallery.url(:thumb), alt: image.gallery.url(:thumb) %></div>
+<% end %>
+<h1>TEST</h1>
+
+<script type="text/javascript">
+	$(function(){
+		// disable auto discover
+	Dropzone.autoDiscover = false;
+ 
+
+	var dropzone = new Dropzone (".dropzone", {
+		maxFilesize: 256, // Set the maximum file size to 256 MB
+		paramName: "image[gallery]", // Rails expects the file upload to be something like model[field_name]
+		addRemoveLinks: false // Don't show remove links on dropzone itself.
+	});	
+
+	dropzone.on("success", function(file) {
+		this.removeFile(file)
+		$.getScript("/images")
+	});
+});
+
+
+</script>

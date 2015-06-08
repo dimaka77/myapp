@@ -16,6 +16,7 @@
 //= require mapbox.js
 //= require jquery_slides/jquery.slides
 //= require snap
+//= require dropzone
 //= require turbolinks
 //= require underscore
 //= require backbone

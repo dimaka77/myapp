@@ -51,6 +51,8 @@ gem 'marionette-rails'
 gem 'rails-backbone', '~> 0.9.10'
 # handlebars
 gem 'handlebars', '~> 0.6.0'
+gem 'paperclip', '~> 4.2.0'
+gem 'dropzonejs-rails', '~> 0.4.16'
 group :development do
 	# helps when things go wrong
 	gem 'better_errors'
