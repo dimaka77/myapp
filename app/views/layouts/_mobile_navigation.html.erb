@@ -1,7 +1,7 @@
 <div class="snap-drawers mobile hide">
     <div class="snap-drawer snap-drawer-right">
         <ul>
-            <li class="details-link"><a href="details#">DETAILS</a></li>
+            <li class="details-link"><a href="details#"><%= link_to 'PRODUCTS',page_path('product_catalog') %></a></li>
             <li class="about-link"><a href="about-us#">ABOUT US</a></li>
             <li class="contact-us-link"><%= link_to 'CONTACT US',page_path('locations') %></li>
             <li class="faq-link"><a href="http://support.eero.com" target="_blank">FAQs</a></li>
@@ -28,9 +28,9 @@
             minDragDistance: 5
       });
 
-        $('#handler').on('click', function(){
-            if( snapper.state().state==="right" ){
-                snapper.close();
+        $('#handler').on( 'click' , function(){
+            if( snapper.state( ).state === 'right' ){
+                snapper.close( );
                 $('.snap-drawers').addClass('hide');
                 $('body').removeClass('show-drawer');
             } else {

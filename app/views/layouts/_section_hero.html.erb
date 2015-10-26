@@ -12,17 +12,17 @@
     <div class="bs-overlay"></div>
     <div id="slides" class="bs-slides">
 
-        <img src="<%= asset_path( 'main_container/slider/slide1.jpg' ) %>" alt="">
-        <img src="<%= asset_path( 'main_container/slider/slide2.jpg' ) %>" alt="">
-        <img src="<%= asset_path( 'main_container/slider/slide3.jpg' ) %>" alt="">
-        <img src="<%= asset_path( 'main_container/slider/slide4.jpg' ) %>" alt="">
+        <img src="<%= asset_path( 'main_container/slider/slide1.jpg' ) %>" alt="img_1">
+        <img src="<%= asset_path( 'main_container/slider/slide2.jpg' ) %>" alt="img_2">
+        <img src="<%= asset_path( 'main_container/slider/slide3.jpg' ) %>" alt="img_3">
+        <img src="<%= asset_path( 'main_container/slider/slide4.jpg' ) %>" alt="img_4">
 
     </div>
 </div>
 </section>
 
 <script type="text/javascript">
-    $(function(){
+    $( function( e ) {
         $("#slides").slidesjs({
             width: 940,
             height: 490,
